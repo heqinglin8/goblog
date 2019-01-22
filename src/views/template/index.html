@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <head>
+            <title>{{.Title}} - My App</title>
+        </head>
+    </head>
+    <body>
+    <p>{{.MyMessage}}</p>
+
+    {{ range $move := .moves }}
+    <p>{{ $move.ID }} &nbsp; {{ $move.Name }}</p>
+    <p>{{ $move.Year }} &nbsp; {{ $move.Genre }}</p>
+      <a href="#"> <img src="{{ $move.Poster }}" width="100" height="150"/> </a>
+    {{ end }}
+    </body>
+</html>
